@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Switch</title>
+  <link href="index.css" rel="stylesheet">
+  <link href="switch.css" rel="stylesheet">
+  <link href="sky.css" rel="stylesheet">
+</head>
+<body>
+<label><input type="checkbox"> Default checkbox</label>
+<div class="switch" style="--switch-background-color: black">
+  <input class="switch_input" id="classic_switch" type="checkbox" name="something">
+  <label for="classic_switch" class="switch_label">
+    <span class="switch_container">
+      <span class="on">
+        <span class="circle"> </span>
+      </span>
+      <span class="off">
+        <span class="circle"> </span>
+      </span>
+    </span>
+    <span class="label_text">Default switch</span>
+  </label>
+</div>
+<div class="switch sky-switch">
+  <input class="switch_input" id="sky_switch" type="checkbox" name="something">
+  <label for="sky_switch" class="switch_label sky_label">
+    <span class="switch_container">
+      <span class="switch_background switch_bg_fullwidth">
+        <span class="on">
+          <span class="cloud"></span>
+          <span class="cloud"></span>
+          <span class="cloud"></span>
+        </span>
+        <span class="off night">
+          <span class="star"></span>
+          <span class="star"></span>
+          <span class="star"></span>
+          <span class="star"></span>
+          <span class="star"></span>
+          <span class="star"></span>
+        </span>
+      </span>
+
+      <span class="on">
+        <span class="circle">
+        </span>
+      </span>
+      <span class="off">
+        <span class="circle moon">
+          <span class="crater"></span>
+          <span class="crater"></span>
+          <span class="crater"></span>
+        </span>
+      </span>
+    </span>
+    <span class="label_text">Sky switch</span>
+  </label>
+</div>
+</body>
+</html>

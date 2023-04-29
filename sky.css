@@ -1,0 +1,126 @@
+.sky-switch {
+  --switch-on-color: yellow;
+  --switch-off-color: #DDD;
+}
+
+.sky_label .switch_container {
+  --switch-border-color: #6600FF;
+}
+
+.switch_input:checked + .sky_label .switch_container {
+  --switch-border-color: #AAA;
+}
+
+
+.cloud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-right-radius: 1em;
+  height: 100%;
+  z-index: 10;
+}
+
+.cloud:nth-child(1) {
+  width: 100%;
+  background-color: #D1DFF6;
+  box-shadow: .1em 0 .3em .4em #D1DFF6;
+}
+
+.cloud:nth-child(2) {
+  width: 66%;
+  background-color: #B2CBF2;
+  box-shadow: .1em 0 .3em .4em #B2CBF2;
+}
+
+.cloud:nth-child(3) {
+  width: 33%;
+  background-color: #92B6F0;
+  box-shadow: .1em 0 .3em .4em #92B6F0;
+}
+
+.crater {
+  background-color: #AAA;
+  width: .2em;
+  height: .2em;
+  border-radius: .1em;
+  position: absolute;
+  z-index: calc(var(--switch-z-index) + 3);
+}
+
+.crater:nth-child(1) {
+  top: 15%;
+  left: 15%;
+}
+
+.crater:nth-child(2) {
+  top: 30%;
+  right: 25%;
+  width: .15em;
+  height: .15em;
+  border-radius: .075em;
+}
+
+.crater:nth-child(3) {
+  top: 65%;
+  left: 40%;
+  width: .175em;
+  height: .175em;
+  border-radius: .0875em;
+}
+
+.moon {
+  position: relative;
+}
+
+.star {
+  color: #FFF;
+  font-size: .5em;
+  position: absolute;
+  width: min-content;
+  height: max-content;
+}
+
+.star::after {
+  content: '✦';
+}
+
+.star:nth-child(1) {
+  right: .1em;
+  top: .3em;
+  color: #F5EEB3;
+}
+
+.star:nth-child(2) {
+  left: 0;
+  bottom: .3rem;
+}
+
+.star:nth-child(3) {
+  left: 66%;
+  font-size: .35em;
+}
+
+.star:nth-child(4) {
+  left: 50%;
+  font-size: .2em;
+  top: 40%;
+}
+
+.star:nth-child(5) {
+  top: .1em;
+  font-size: .3em;
+  left: 25%;
+  color: #F5DEB3;
+}
+
+.star:nth-child(6) {
+  right: 20%;
+  font-size: .35em;
+  bottom: 15%;
+  color: #F5DEB3;
+}
+
+.night {
+  background: linear-gradient(-45deg, #000, #333);
+}

@@ -1,0 +1,140 @@
+.switch_label * {
+  display: block;
+}
+
+.switch_label {
+  display: flex;
+  flex-direction: row;
+}
+
+.switch {
+  width: max-content;
+}
+
+.switch_label {
+  cursor: pointer;
+}
+
+.on {
+  display: none;
+}
+
+.off {
+  display: block;
+}
+
+.on, .off {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: calc(var(--switch-z-index) + 2);
+}
+
+.switch_input:checked + .switch_label .on {
+  display: block;
+}
+
+.switch_input:checked + .switch_label .switch_background .on {
+  animation: var(--switch-animation-duration) linear appear;
+}
+
+.switch_background .off {
+var(--switch-animation-duration) linear appear;
+}
+
+.switch_input:checked + .switch_label .on > .circle {
+  animation: var(--switch-animation-duration) linear ltr, var(--switch-animation-duration) linear appear;
+  left: 100%;
+  transform: translateX(-100%);
+}
+
+.switch_input:checked + .switch_label .off {
+  display: none;
+}
+
+.circle {
+  width: 1em;
+  height: 1em;
+  border-radius: .5em;
+}
+
+.on > .circle {
+  background: var(--switch-on-color, yellow);
+  position: relative;
+}
+
+.off > .circle {
+  animation: var(--switch-animation-duration) reverse linear ltr, var(--switch-animation-duration) linear appear;
+  position: relative;
+  background: var(--switch-off-color, grey);
+}
+
+.switch_input {
+  opacity: 0;
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: transparent;
+}
+
+.switch_container {
+  position: relative;
+  width: 2.2em;
+  height: 1em;
+  border-radius: .7em;
+  padding: .2em;
+  z-index: var(--switch-z-index);
+  background: var(--switch-background-color, black);
+}
+
+.switch_background {
+  top: .1em;
+  left: .1em;
+  width: calc(100% - .2em);
+  height: calc(100% - .2em);
+  border-radius: .7em;
+  position: absolute;
+  overflow: hidden;
+  z-index: calc(var(--switch-z-index) + 1);
+}
+
+.switch_background > * {
+  width: 100%;
+  height: 100%;
+}
+
+.switch_bg_fullwidth {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.switch_input:focus + .switch_label .switch_container {
+  outline: 2px solid var(--switch-border-color, #00BFFF) !important;
+}
+
+.label_text {
+  margin-left: .5em;
+}
+
+@keyframes ltr {
+  from {
+    left: 0;
+    transform: translateX(0);
+  }
+  to {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}

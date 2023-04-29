@@ -1,0 +1,12 @@
+.switch {
+  margin-top: 1rem;
+}
+
+:root {
+  --switch-on-color: yellow;
+  --switch-off-color: grey;
+  --switch-background-color: black;
+  --switch-border-color: #00BFFF;
+  --switch-z-index: 0;
+  --switch-animation-duration: .1s;
+}
